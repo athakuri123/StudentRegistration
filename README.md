@@ -1,5 +1,5 @@
-#Student Registration
-
+Student Registration
+---
 This project simulates students registering for classes.
 
 ```
