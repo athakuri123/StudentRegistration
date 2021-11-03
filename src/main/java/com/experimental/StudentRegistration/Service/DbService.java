@@ -23,7 +23,7 @@ public class DbService
         //Database entry to use in data entry service
         //String entry = "INSERT INTO Registration.Students (student_id, fst_name, lst_name, major) VALUES('3', 'James', 'Harrison', 'Accounting');";
         try {
-            fh = new FileHandler("src/main/resources/MyLogFile.log");
+            fh = new FileHandler("src/main/resources/DataView.log");
             logger.addHandler(fh);
             SimpleFormatter formatter = new SimpleFormatter();
             fh.setFormatter(formatter);
