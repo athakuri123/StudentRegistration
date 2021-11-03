@@ -32,7 +32,7 @@ public class ClassEntryService {
         FileHandler fh;
 
         //Database entry to use in data entry service
-        String entry = "INSERT INTO Registration.Classes (couse_id, course_name, major) VALUES('" + id + "', '" + name + "', '" + major + "');";
+        String entry = "INSERT INTO Registration.Classes (course_id, course_name, major) VALUES('" + id + "', '" + name + "', '" + major + "');";
 
         try {
             fh = new FileHandler("src/main/resources/EntryLogFile.log");

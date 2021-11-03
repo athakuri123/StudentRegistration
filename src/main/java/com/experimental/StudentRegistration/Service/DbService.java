@@ -20,6 +20,7 @@ public class DbService
         FileHandler fh;
 
         String info = "SELECT * FROM Registration.Students;";
+        String courseInfo = "SELECT * FROM Registration.Classes";
         //Database entry to use in data entry service
         //String entry = "INSERT INTO Registration.Students (student_id, fst_name, lst_name, major) VALUES('3', 'James', 'Harrison', 'Accounting');";
         try {
@@ -43,6 +44,18 @@ public class DbService
                 String lastName = rs.getString("lst_name");
                 String major = rs.getString("major");
                 System.out.format("| %s | %s | %s | %s |\n" , studentID, firstName, lastName, major);
+            }
+
+            System.out.println();
+
+            ResultSet cr = state.executeQuery(courseInfo);
+            while (cr.next())
+            {
+                String courseId = cr.getString("course_id");
+                String courseName = cr.getString("course_name");
+                String cMajor = cr.getString("major");
+
+                System.out.format("| %s | %s | %s |\n" , courseId, courseName, cMajor);
             }
             //Use below for database entry
             //state.execute(entry);
